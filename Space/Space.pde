@@ -1,11 +1,27 @@
-//Declare your variables here
-// so try declaring one Particle first, then instantiate it in setup, and use move and show in draw()
+ Normal[] particle;
 
 void setup() {
-	//your code here
-} //end of setup
- 
+  size(500, 500); 
+  particle = makeParticles(500);
+}
+
 
 void draw() {
-	//your code here
-} //end of draw
+  fill(255);
+  background(0);
+  for(Normal particles : particle){
+    particles.move();
+    particles.show();
+  }
+}
+
+Normal[] makeParticles(int num){
+   Normal particle[] = new Normal[num];
+   for(int i = 0; i < particle.length; i++){
+     particle[i] = new Normal();
+   }
+   
+   return particle;
+ }
+ 
+ 
