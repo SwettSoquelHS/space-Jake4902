@@ -1,4 +1,4 @@
-class Normal {
+public class Normal {
   double xpos;
   double ypos;
   int shade;
@@ -10,7 +10,7 @@ class Normal {
     ypos = 0;
     shade = (int)(Math.random()*250)+1;
     angle = Math.random()*(PI*2);
-    speed = (Math.random()*250)+1;
+    speed = (Math.random()*10)+1;
   }
   void move(){
     xpos = xpos + Math.cos(angle)*speed;
